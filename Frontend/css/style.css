@@ -1,0 +1,114 @@
+/* gato.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #3b3f47;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #e8eef0;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-score {
+    text-align: center;
+}
+
+.player-score h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.player-score p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    background-color: #ffffff7f;
+}
+
+.cell.winning {
+    background-color: #4caf50 !important;
+    color: white !important;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #000000;
+    color: rgb(111, 99, 99);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
